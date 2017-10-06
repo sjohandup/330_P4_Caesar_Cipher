@@ -3,10 +3,13 @@
 
 
 # Variable to store text from file (global)
-file_Sting = ""
+file_String = ""
 
 # Function that reads from a file
 def read_File () :
+	global file_String
+	encoded_txt = open('cipher.txt', 'r')
+	file_String = encoded_txt.read()
 
 
 # Function that deciphers the cipher
@@ -21,8 +24,8 @@ def print_File () :
 
 # Main function
 def main () :
-	global file_Sting
-	print (file_Sting)
+	global file_String
+	print (file_String)
 
 
 # Run main module

@@ -45,15 +45,25 @@ def ceaser_Cipher () :
 		for c in range (0, len (iterations)) :
 			# Check if the max number ascii value has been reached
 			if (ord (iterations[c]) == numbers) :
-				 iterations[c] = (chr (ord (iterations[c]) + 8))
+				# Numbers to caps
+				iterations[c] = (chr (ord (iterations[c]) + 8))
+				# Numbers to lower case
+				#iterations[c] = (chr (ord (iterations[c]) + 40))
 			# Check if the max large caps ascii value has been reached
 			elif (ord (iterations[c]) == large_Caps) :
-				 iterations[c] =  (chr (ord (iterations[c]) + 7))
+				# Caps to lower case
+				iterations[c] =  (chr (ord (iterations[c]) + 7))
+				# Caps to numbers
+				#iterations[c] =  (chr (ord (iterations[c]) - 42))
 			# Check if the max small caps ascii value has been reached
 			elif (ord (iterations[c]) == small_Caps) :
-				 iterations[c] =  (chr (ord (iterations[c]) - 74))
+				# Lower case to numbers
+				iterations[c] =  (chr (ord (iterations[c]) - 74))
+				# Lower case to caps
+				#iterations[c] =  (chr (ord (iterations[c]) - 57))
 			else :
-				 iterations[c] =  (chr (ord (iterations[c]) + 1))
+				# Otherwise incriment
+				iterations[c] =  (chr (ord (iterations[c]) + 1))
 		# Print the iteration count
 		print ("Iteration: ", str (i))
 		# Print the cipher

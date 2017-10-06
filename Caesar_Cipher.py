@@ -1,3 +1,7 @@
+# SJ du Plooy	- 12070794
+# M  Peroski	- 13242475
+
+
 # Variable to store text from file (global)
 file_Sting = ""
 
@@ -26,7 +30,8 @@ def print_File () :
 
 # Main function
 def main () :
-
+	global file_Sting
+	print (file_Sting)
 
 # Run main module
 if (__name__ == "__main__") :

@@ -11,6 +11,7 @@ def read_File () :
 	file_String = encoded_txt.read()
 	encoded_txt.close()
 
+# Function that writes to the file
 def write_File (decodedArray) :
 	size = len(decodedArray)
 	decoded_txt = open('decoded.txt', 'w')
@@ -18,7 +19,6 @@ def write_File (decodedArray) :
 		decoded_txt.write(decodedArray[i])
 		decoded_txt.write('\n')
 	decoded_txt.close()
-
 
 # Function that deciphers the cipher
 def ceaser_Cipher () :
@@ -70,8 +70,8 @@ def print_File () :
 
 # Main function
 def main () :
-	global file_String
-	print (file_String)
+	read_File ()
+	ceaser_Cipher ()
 
 # Run main module
 if (__name__ == "__main__") :

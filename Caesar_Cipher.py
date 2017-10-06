@@ -1,5 +1,5 @@
-# Variable to store text from file
-global file_Sting = ""
+# Variable to store text from file (global)
+file_Sting = ""
 
 # Function that reads from a file
 def function read_File () :

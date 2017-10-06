@@ -1,7 +1,6 @@
 # SJ du Plooy	- 12070794
 # M  Peroski	- 13242475
 
-
 # Variable to store text from file (global)
 file_Sting = ""
 
@@ -14,15 +13,38 @@ def ceaser_Cipher () :
     # Call variable that stores cipher
     global file_Sting
     # Variables that store point breaks in ascii table
-    numbers = 48
-    small_Caps = 65
-    large_Caps = 97
+    numbers = 57
+    large_Caps = 90
+    small_Caps = 122
     # Counter variable
     count = 61
+    # String array to store all of the iterations
+    iterations = []
+    # Append cipher
+    iteration.append (file_Sting)
 
-    for i in range (0, count) :
+    # Loop through the counter
+    for i in range (1, count) :
+        # Loop through each of the characters
         for c in range (0, len (file_Sting)) :
-            print ("DUMMY")
+            # Check if the max number ascii value has been reached
+            if (ord (file_Sting[c]) == number) :
+                file_Sting[c] = chr (ord (file_Sting[c]) + 8)
+            # Check if the max large caps ascii value has been reached
+            elif (ord (file_Sting[c]) == large_Caps) :
+                file_Sting[c] = chr (ord (file_Sting[c]) + 7)
+            # Check if the max small caps ascii value has been reached
+            elif (ord (file_Sting[c]) == small_Caps) :
+                file_Sting[c] = chr (ord (file_Sting[c]) - 74)
+            else :
+                file_Sting[c] = chr (ord (file_Sting[c]) + 1)
+        # Print the iteration count
+        print ("Iteration: " + count)
+        # Print the cipher
+        print (file_Sting + "\n")
+        # Append to the string file
+        iteration.append (file_Sting)
+    # Call write file function
 
 # Function that prints from a file
 def print_File () :
@@ -32,7 +54,6 @@ def print_File () :
 def main () :
 	global file_Sting
 	print (file_Sting)
-
 
 # Run main module
 if (__name__ == "__main__") :

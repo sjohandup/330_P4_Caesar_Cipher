@@ -2,17 +2,17 @@
 file_Sting = ""
 
 # Function that reads from a file
-def function read_File () :
+def read_File () :
 
 
 # Function that deciphers the cipher
-def function ceaser_Cipher () :
+def ceaser_Cipher () :
     numbers = 48
     small_Caps = 65
     large_Caps = 97
 
 # Function that prints from a file
-def function print_File () :
+def print_File () :
 
 
 # Main function

@@ -2,10 +2,22 @@
 # M  Peroski	- 13242475
 
 # Variable to store text from file (global)
-file_Sting = ""
+file_String = ""
 
 # Function that reads from a file
 def read_File () :
+	global file_String
+	encoded_txt = open('cipher.txt', 'r')
+	file_String = encoded_txt.read()
+	encoded_txt.close()
+
+def write_File (decodedArray) :
+	size = len(decodedArray)
+	decoded_txt = open('decoded.txt', 'w')
+	for i in range(0..size) :
+		decoded_txt.write(decodedArray[i])
+		decoded_txt.write('\n')
+	decoded_txt.close()
 
 
 # Function that deciphers the cipher
@@ -48,12 +60,17 @@ def ceaser_Cipher () :
 
 # Function that prints from a file
 def print_File () :
+	decoded_file_String = ""
+	encoded_txt = open('decoded.txt', 'r')
+	decoded_file_String = encoded_txt.read()
+	encoded_txt.close()
+	print (decoded_file_String)
 
 
 # Main function
 def main () :
-	global file_Sting
-	print (file_Sting)
+	global file_String
+	print (file_String)
 
 # Run main module
 if (__name__ == "__main__") :

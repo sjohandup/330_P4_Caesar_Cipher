@@ -57,6 +57,7 @@ def ceaser_Cipher () :
         # Append to the string file
         iteration.append (file_Sting)
     # Call write file function
+	write_File (iteration)
 
 # Function that prints from a file
 def print_File () :

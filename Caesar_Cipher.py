@@ -1,6 +1,9 @@
 # SJ du Plooy	- 12070794
 # M  Peroski	- 13242475
 
+# Import libraries
+import os
+
 # Variable to store text from file (global)
 file_String = ""
 
@@ -12,17 +15,172 @@ def read_File () :
 	encoded_txt.close()
 
 # Function that writes to the file
-def write_File (decodedArray) :
+def write_File (decodedArray, perm) :
 	size = len(decodedArray)
-	decoded_txt = open("decoded.txt", "w")
+	decoded_txt = open("decoded.txt", "a")
+	decoded_txt.write ("Permutation: ")
+	decoded_txt.write (str (perm))
+	decoded_txt.write("\n")
+	decoded_txt.write("\n")
 	for i in range(0, size) :
 		decoded_txt.write(decodedArray[i])
 		decoded_txt.write("\n")
 		decoded_txt.write("\n")
 	decoded_txt.close()
 
+# Permutation one
+def perm_1 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to caps
+		return (chr (ord (iterations) + 8))
+		# Numbers to lower case
+		#return (chr (ord (iterations[c]) + 40))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to lower case
+		return (chr (ord (iterations) + 7))
+		# Caps to numbers
+		#return (chr (ord (iterations[c]) - 42))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to numbers
+		return (chr (ord (iterations) - 74))
+		# Lower case to caps
+		#return (chr (ord (iterations[c]) - 57))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation two
+def perm_2 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to lower case
+		return (chr (ord (iterations) + 40))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to lower case
+		return (chr (ord (iterations) + 7))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to numbers
+		return (chr (ord (iterations) - 74))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation three
+def perm_3 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to caps
+		return (chr (ord (iterations) + 8))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to numbers
+		return (chr (ord (iterations) - 42))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to numbers
+		return (chr (ord (iterations) - 74))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+
+# Permutation four
+def perm_4 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to caps
+		return (chr (ord (iterations) + 8))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to lower case
+		return (chr (ord (iterations) + 7))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to caps
+		return (chr (ord (iterations) - 57))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation five
+def perm_5 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to caps
+		return (chr (ord (iterations) + 8))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to numbers
+		return (chr (ord (iterations) - 42))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to caps
+		return (chr (ord (iterations) - 57))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation six
+def perm_6 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to lower case
+		return (chr (ord (iterations) + 40))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to numbers
+		return (chr (ord (iterations) - 42))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to numbers
+		return (chr (ord (iterations) - 74))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation seven
+def perm_7 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to lower case
+		return (chr (ord (iterations) + 40))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to lower case
+		return (chr (ord (iterations) + 7))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to caps
+		return (chr (ord (iterations) - 57))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
+# Permutation eight
+def perm_8 (iterations, numbers, large_Caps, small_Caps) :
+	# Check if the max number ascii value has been reached
+	if (ord (iterations) == numbers) :
+		# Numbers to lower case
+		return (chr (ord (iterations) + 40))
+	# Check if the max large caps ascii value has been reached
+	elif (ord (iterations) == large_Caps) :
+		# Caps to numbers
+		return (chr (ord (iterations) - 42))
+	# Check if the max small caps ascii value has been reached
+	elif (ord (iterations) == small_Caps) :
+		# Lower case to caps
+		return (chr (ord (iterations) - 57))
+	else :
+		# Otherwise incriment
+		return (chr (ord (iterations) + 1))
+
 # Function that deciphers the cipher
-def ceaser_Cipher () :
+def ceaser_Cipher (perm) :
     # Call variable that stores cipher
 	global file_String
     # Variables that store point breaks in ascii table
@@ -43,35 +201,31 @@ def ceaser_Cipher () :
 	for i in range (1, count) :
 		# Loop through each of the characters
 		for c in range (0, len (iterations)) :
-			# Check if the max number ascii value has been reached
-			if (ord (iterations[c]) == numbers) :
-				# Numbers to caps
-				iterations[c] = (chr (ord (iterations[c]) + 8))
-				# Numbers to lower case
-				#iterations[c] = (chr (ord (iterations[c]) + 40))
-			# Check if the max large caps ascii value has been reached
-			elif (ord (iterations[c]) == large_Caps) :
-				# Caps to lower case
-				iterations[c] =  (chr (ord (iterations[c]) + 7))
-				# Caps to numbers
-				#iterations[c] =  (chr (ord (iterations[c]) - 42))
-			# Check if the max small caps ascii value has been reached
-			elif (ord (iterations[c]) == small_Caps) :
-				# Lower case to numbers
-				iterations[c] =  (chr (ord (iterations[c]) - 74))
-				# Lower case to caps
-				#iterations[c] =  (chr (ord (iterations[c]) - 57))
-			else :
-				# Otherwise incriment
-				iterations[c] =  (chr (ord (iterations[c]) + 1))
+			# Check permutation counter
+			if (perm == 1) :
+				iterations[c] = perm_1 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 2) :
+				iterations[c] = perm_2 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 3) :
+				iterations[c] = perm_3 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 4) :
+				iterations[c] = perm_4 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 5) :
+				iterations[c] = perm_5 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 6) :
+				iterations[c] = perm_6 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 7) :
+				iterations[c] = perm_7 (iterations[c], numbers, large_Caps, small_Caps)
+			elif (perm == 8) :
+				iterations[c] = perm_8 (iterations[c], numbers, large_Caps, small_Caps)
 		# Print the iteration count
-		print ("Iteration: ", str (i))
+		#print ("Iteration: ", str (i))
 		# Print the cipher
-		print (''.join (iterations), "\n")
+		#print (''.join (iterations), "\n")
 		# Append to the array of strings
 		to_File.append (''.join (iterations))
 	# Call write file function
-	write_File (to_File)
+	write_File (to_File, perm)
 
 # Function that prints from a file
 def print_File () :
@@ -83,8 +237,16 @@ def print_File () :
 
 # Main function
 def main () :
+	# Remove decoded file if it is present 
+	if (os.path.isfile('./decoded.txt')) :
+		os.remove("decoded.txt")
+	print ("Reading the cypher from the file")
 	read_File ()
-	ceaser_Cipher ()
+	print ("Decyphering")
+	# Loop though all of the permutations
+	for i in range (1, 9) :
+		ceaser_Cipher (i)
+	print ("Decyphered possible combinations")
 
 # Run main module
 if (__name__ == "__main__") :

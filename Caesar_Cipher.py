@@ -18,15 +18,15 @@ def read_File () :
 def write_File (decodedArray, count, perm) :
 	size = len(decodedArray)
 	decoded_txt = open("decoded.txt", "a")
-	decoded_txt.write ("Alphabet size: ")
-	decoded_txt.write (str (count))
-	decoded_txt.write (str (" >< Permutation: "))
-	decoded_txt.write (str (perm))
-	decoded_txt.write("\n")
+	#decoded_txt.write ("Alphabet size: ")
+	#decoded_txt.write (str (count))
+	#decoded_txt.write (str (" >< Permutation: "))
+	#decoded_txt.write (str (perm))
+	#decoded_txt.write("\n")
 	for i in range(0, size) :
 		decoded_txt.write(decodedArray[i])
 		decoded_txt.write("\n")
-	decoded_txt.write("\n")
+	#decoded_txt.write("\n")
 	decoded_txt.close()
 
 # Permutation one

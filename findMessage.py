@@ -1,3 +1,6 @@
+# SJ du Plooy	- 12070794
+# M  Peroski	- 13242475
+
 # Main function
 def main () :
 	# Variable to store entire text file as string
